@@ -33,8 +33,9 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         //Check is Grounded
-        isGround = Physics2D.OverlapCircle(groundCheck.transform.position, 
-        groundCheckRadius,groundMask);
+        isGround = Physics2D.OverlapBox(groundCheck.transform.position, groundCheck.GetComponent<BoxCollider2D>().size,1.57f, groundMask);
+        // isGround = Physics2D.OverlapCircle(groundCheck.transform.position, 
+        // groundCheckRadius,groundMask);
         
         //Bounce force
         if(jumpForce > 0 && isGround == false)
@@ -74,6 +75,9 @@ public class PlayerBehaviour : MonoBehaviour
             // rb2.angularVelocity = 0f;
             canJump = true;    
             jumpForce = 0.0f;
+
+            //save position when player lands on ground
+            SavePlayerPositionData();
         }
     }
 

@@ -36,7 +36,7 @@ public class InputPlayer : MonoBehaviour
 		if (holdTime < 0.3f)
 			player.Jump(2f*player.jumpHigh,jumpDir * player.jumpFar);
 		else
-			player.Jump(holdTime * 20f*player.jumpHigh,jumpDir * player.jumpFar);
+			player.Jump(holdTime * 30f*player.jumpHigh,jumpDir * player.jumpFar);
         
 		powerBar.fillAmount = 0f;
         Debug.Log(jumpDir);

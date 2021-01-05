@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         }
         if(Mathf.Abs(yDifference) >= threshold.y){
             //0.7f 100f is limit camera position y
-            newPosition.y = Mathf.Clamp(follow.y,-4f,100f);
+            newPosition.y = Mathf.Clamp(follow.y,-4f,transform.position.y+100f);
         }
         transform.position = newPosition;
     }
