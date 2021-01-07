@@ -8,10 +8,15 @@ public class ShopController : MonoBehaviour
     [SerializeField] private GameObject[] shopItems;   
     private int currentSkinID;
 
+    private AudioSource audioSource;
+    public AudioClip selectSound;
+
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         setupShopView();
     }
+
     void Update()
     {
         
@@ -39,6 +44,7 @@ public class ShopController : MonoBehaviour
 
     public void equipSkinButton(int SkinID)
     {
+        audioSource.PlayOneShot(selectSound);
         shopItems[currentSkinID].transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "Equip";
         shopItems[currentSkinID].transform.Find("Button").GetComponent<Button>().interactable = true;
         PlayerPrefs.SetInt("Skin",SkinID);

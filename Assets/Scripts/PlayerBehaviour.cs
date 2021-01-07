@@ -9,6 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
     public bool canJump = true;
     private Rigidbody2D rb2;
     private GameController gameController;
+    private AudioSource audioSource;
     [SerializeField] private PhysicsMaterial2D bounceMat;
     [SerializeField] private PhysicsMaterial2D normalMat;
     public LayerMask groundMask;
@@ -19,10 +20,15 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float groundCheckRadius=0.1f;
     [SerializeField] private Animator playerAnim;
 
+    public AudioClip bump;
+    public AudioClip jump;
+    public AudioClip land;
+    public AudioClip splat;
+
     // Start is called before the first frame update
     void Awake()
     {   
-        
+        audioSource = GetComponent<AudioSource>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         rb2 = this.gameObject.GetComponent<Rigidbody2D>();
         jumpForce = 0.0f;
@@ -70,7 +76,8 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Ground") && isGround)
-        {   
+        {
+            audioSource.PlayOneShot(land);
             rb2.velocity = Vector2.zero;
             // rb2.angularVelocity = 0f;
             canJump = true;    
@@ -78,6 +85,10 @@ public class PlayerBehaviour : MonoBehaviour
 
             //save position when player lands on ground
             SavePlayerPositionData();
+        }
+        else
+        {
+            audioSource.PlayOneShot(bump);
         }
     }
 
@@ -94,6 +105,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void Jump(float forceJump,float jumpDir)
     {
         playerAnim.SetBool("Charging",false);
+        audioSource.PlayOneShot(jump);
         jumpForce = forceJump;
         Debug.Log("Jump Dir " + jumpDir +  "   Jump Force: " + jumpForce);
         if(isGround)
