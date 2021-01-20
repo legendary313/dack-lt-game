@@ -194,6 +194,8 @@ MonoBehaviour:
   skinObject: {fileID: 8971247312411407430}
   Jumpking2: {fileID: 22100000, guid: 3fea2f4d82aa1004ab8ea50fcaf2dbf9, type: 2}
   Jumpking3: {fileID: 22100000, guid: 2fe8a13e997ed864bb068e61f788f07e, type: 2}
+  Jumpking4: {fileID: 22100000, guid: 645a506b0e8201344b63b06451693e73, type: 2}
+  Jumpking5: {fileID: 22100000, guid: d0834dec8411b0e4f861c2d8f1bf41d3, type: 2}
 --- !u!82 &492035510
 AudioSource:
   m_ObjectHideFlags: 0

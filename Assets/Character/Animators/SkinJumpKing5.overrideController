@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkinJumpKing5
+  m_Controller: {fileID: 9100000, guid: 6152787315ed9ed4eae7b2258a8eaa32, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fded1b4b0a0d51b499902fe387d24a44, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7e39f4c687e7674408f27da248581dc7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4b1b4f97d7d235f438c11676e27b840b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f745f90b299987b4c8908faec83218d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 508d1fbeb7f58f147a0f20674976e988, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2824a91bb2f4c784581c7bb0464dc8f7, type: 2}
