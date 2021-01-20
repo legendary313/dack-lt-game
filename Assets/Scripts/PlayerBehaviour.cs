@@ -80,7 +80,8 @@ public class PlayerBehaviour : MonoBehaviour
             audioSource.PlayOneShot(land);
             rb2.velocity = Vector2.zero;
             // rb2.angularVelocity = 0f;
-            canJump = true;    
+            canJump = true;
+            // rb2.isKinematic = true;
             jumpForce = 0.0f;
 
             //save position when player lands on ground
@@ -112,6 +113,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             rb2.velocity = new Vector2(jumpDir*jumpForce,jumpForce);    
             canJump = false;
+            // rb2.isKinematic = false;
         }
         if(jumpDir > 0)
         {
