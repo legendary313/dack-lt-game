@@ -147,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.013169788}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -158,7 +158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1}
+  m_Size: {x: 0.96488094, y: 0.07366042}
   m_EdgeRadius: 0
 --- !u!50 &373858176
 Rigidbody2D:
@@ -360,12 +360,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.62571734, y: 0.6889636}
-      - {x: -0.6009956, y: 0.68797207}
-      - {x: -0.6088331, y: 0.02143234}
-      - {x: -0.336756, y: -0.59599394}
-      - {x: 0.44313273, y: -0.5960612}
-      - {x: 0.67710173, y: -0.039532423}
+    - - {x: 0.6540699, y: 0.6948885}
+      - {x: 0.052678585, y: 1.0087798}
+      - {x: -0.5774176, y: 0.6523067}
+      - {x: -0.69666123, y: 0.018824339}
+      - {x: -0.41218925, y: -0.5895221}
+      - {x: 0.5438862, y: -0.5895219}
+      - {x: 0.7755697, y: 0.018977642}
 --- !u!82 &9038229266371273976
 AudioSource:
   m_ObjectHideFlags: 0
