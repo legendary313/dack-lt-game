@@ -68,4 +68,6 @@ public class GameController : MonoBehaviour
         player.gameObject.GetComponent<PlayerBehaviour>().SavePlayerPositionData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
+
 }   
+
