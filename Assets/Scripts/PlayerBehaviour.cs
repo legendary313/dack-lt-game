@@ -79,9 +79,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             audioSource.PlayOneShot(land);
             rb2.velocity = Vector2.zero;
-            // rb2.angularVelocity = 0f;
+            // rb2.angularVelocity = 0.0f;
             canJump = true;
-            // rb2.isKinematic = true;
             jumpForce = 0.0f;
 
             //save position when player lands on ground
@@ -94,7 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     //Check floor player is landing
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Floor"))
         {

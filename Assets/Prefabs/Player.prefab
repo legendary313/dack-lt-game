@@ -128,7 +128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8971247312211723985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.069, y: -0.667, z: 0}
+  m_LocalPosition: {x: 0.069, y: -0.677, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8971247313092590935}
@@ -147,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.013169788}
+  m_Offset: {x: -0.012875676, y: -0.008260347}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -158,7 +158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96488094, y: 0.07366042}
+  m_Size: {x: 0.76745605, y: 0.11652069}
   m_EdgeRadius: 0
 --- !u!50 &373858176
 Rigidbody2D:
@@ -193,7 +193,6 @@ GameObject:
   - component: {fileID: 8971247313092590932}
   - component: {fileID: 8971247313092590923}
   - component: {fileID: 1769605390}
-  - component: {fileID: 6055889724450374835}
   - component: {fileID: 4430945081332184495}
   - component: {fileID: 9038229266371273976}
   m_Layer: 9
@@ -307,7 +306,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,22 +318,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &6055889724450374835
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8971247313092590921}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04019183, y: 0.19179946}
-  m_Size: {x: 1.4676319, y: 1.4676319}
-  m_Direction: 0
 --- !u!60 &4430945081332184495
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -360,13 +343,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.6540699, y: 0.6948885}
-      - {x: 0.052678585, y: 1.0087798}
-      - {x: -0.5774176, y: 0.6523067}
-      - {x: -0.69666123, y: 0.018824339}
-      - {x: -0.41218925, y: -0.5895221}
-      - {x: 0.5438862, y: -0.5895219}
-      - {x: 0.7755697, y: 0.018977642}
+    - - {x: 0.46522832, y: 0.57471657}
+      - {x: 0.1127646, y: 0.7598524}
+      - {x: -0.44866216, y: 0.58363724}
+      - {x: -0.57659185, y: -0.08417988}
+      - {x: -0.34533012, y: -0.5947151}
+      - {x: 0.4510435, y: -0.5895195}
+      - {x: 0.63804185, y: -0.0503006}
 --- !u!82 &9038229266371273976
 AudioSource:
   m_ObjectHideFlags: 0

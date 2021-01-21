@@ -10,11 +10,12 @@ public class ShopController : MonoBehaviour
 
     private AudioSource audioSource;
     public AudioClip selectSound;
-
+    private bool activeSkins= false;
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         setupShopView();
+        
     }
 
     void Update()
@@ -33,8 +34,35 @@ public class ShopController : MonoBehaviour
         }
     }
 
+    private void checkSkinActive()
+    {
+        if(PlayerPrefs.HasKey("HighestFloor"))
+        {
+            if(PlayerPrefs.GetInt("HighestFloor") >=2)
+            {
+                activeSkins = true;
+            }
+        }
+        if(activeSkins == true)
+        {
+            for(int i=1;i<shopItems.Length;i++)
+            {
+                shopItems[i].transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "Equip";
+                shopItems[i].transform.Find("Button").GetComponent<Button>().interactable = true;
+            }
+        }
+        else{
+            for(int i=1;i<shopItems.Length;i++)
+            {
+                shopItems[i].transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "not unlock";
+                shopItems[i].transform.Find("Button").GetComponent<Button>().interactable = false;
+            }
+        }
+    }
+
     private void setupShopView()
     {
+        checkSkinActive();
         checkCurrentSkin();
         shopItems[currentSkinID].transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "Equipped";
         shopItems[currentSkinID].transform.Find("Button").GetComponent<Button>().interactable = false;

@@ -26,6 +26,7 @@ public class InputPlayer : MonoBehaviour
 
     public void OnPointerDown()
 	{
+        player.GetComponent<Rigidbody2D>().isKinematic = false;
 		powerBar.fillAmount = 0f;
 		StartCoroutine ("StartCounting");
 	}
@@ -43,7 +44,9 @@ public class InputPlayer : MonoBehaviour
 	}
 
 	IEnumerator StartCounting()
-	{   
+	{          
+        player.GetComponent<Rigidbody2D>().isKinematic = false;
+
         playerAnim.SetBool("Charging",true);
         while (true)
         {
